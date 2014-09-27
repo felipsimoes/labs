@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>The Fibonacci Numbers</title>
+</head>
+<body>
+<script>
+document.write("<h2>Table of Fibonacci Numbers</h2>");
+for (i=0, j=1, k=0, f=0; i<50; i++, f=j+k, j=k, k=f){
+	document.write("Fibonnaci (" + i + ") = " + f);
+	document.write("<br>");
+}
+</script>
+</body>
+</html>
