@@ -1,0 +1,41 @@
+* {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+header  {
+    background-color: ghostwhite;
+}
+
+header img {
+    height: 50%;
+    width: 50%;
+}
+
+article {
+    height: 400px;
+    background-color:darkseagreen;
+}
+
+article p {
+    font-family: fantasy;
+    font-size: 1.5em;
+    padding: 20% 50% 20% 50%;
+    opacity: 1.0;
+}
+
+.ativada {
+    opacity: 0.0;
+}
+
+.ativa:hover +.ativada {
+    opacity: 1;
+    transition: opacity 2s ease 2s;
+
+}
+
+footer {
+    height: 20px;
+    text-align: right;
+    border: 2px solid blue;
+}

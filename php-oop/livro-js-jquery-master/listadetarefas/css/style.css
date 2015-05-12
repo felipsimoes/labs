@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+
+body {
+    width: auto;
+    height: auto;
+}
+
+#container{
+    position: relative;
+    top: 50px;
+    left: 40px;
+    width: 400px;
+    border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+}
+
+h1 {
+    font-size: 30px;
+    color: red;
+}
+
+#tarefa {
+    margin-top:10px;   
+    height: auto;
+    width:300px;
+    background-color: antiquewhite;
+    border: 2px groove blue;
+}
+
+#tarefa-item {
+    margin-top: 150px;
+    width: auto;
+    top: 200px;
+    list-style: none;
+}
+
+.tarefa-item {
+    text-decoration: none;
+    text-color: aqua;
+    font-size: 20px;
+}
+
+.tarefa-item:nth-child(even) {
+    background-color: lightgrey;
+}

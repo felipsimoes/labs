@@ -1,0 +1,49 @@
+* {
+    margin:0;
+    border:0;
+    padding:0;
+    text-decoration: none;
+}
+
+body {
+    
+}
+
+h1 {
+    position: absolute;
+    border: 1px solid black;
+    width: auto;
+    height: 60px;
+    font-family: "Arial Black";
+    font-size: 35px;
+    display: inline-block;
+    text-align: center;
+    top: 50%;
+    margin-top: -30px;
+    left: 20%;
+}
+
+section {
+    border: 1px solid black;
+    height: 100px;
+    top: 10px;
+    position: relative;
+}
+
+table {
+    height: auto;
+    width: 400px;
+    border: 1px solid blue;
+    top: 100px;
+    position: absolute;
+    left: 20%;
+    font-size: 20px;
+}
+
+th {
+    background-color: antiquewhite;
+}
+
+tr:nth-child(even) {
+    background-color: #ededed;
+}
