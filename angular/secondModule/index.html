@@ -23,9 +23,9 @@
           <ul class="nav nav-pills">
             <li ng-class="{ active: panel.isSelected(1)}">
               <a href="" ng-click="panel.selectTab(1)">Description</a></li>
-            <li ng-class="{ active:tab === 2}">
+            <li ng-class="{ active: panel.isSelected(2)}">
               <a href="" ng-click="panel.selectTab(2)">Specification</a></li>
-            <li ng-class="{ active:tab === 3}">
+            <li ng-class="{ active: panel.isSelected(3)}">
               <a href="" ng-click="panel.selectTab(3)">Reviews</a></li>
           </ul>
           <div class="panel" ng-show="panel.isSelected(1)">
@@ -34,7 +34,7 @@
           </div>
           <div class="panel" ng-show="panel.isSelected(2)">
             <h4>Specification</h4>
-            <p>None yet</p>
+            <p>Shine: {{product.shine}}</p>
           </div>
           <div class="panel" ng-show="panel.isSelected(3)">
             <h4>Reviews</h4>
