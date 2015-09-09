@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <title>Shaping up with Angular.js</title>
+</head>
+<body ng-controller="StoreController as store">
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="product in store.products">
+      <h3>
+        {{product.name}}
+        <em class="pull-right">{{product.price | currency}}</em>
+      </h3>
+    </li1list-group-item>
+  </ul>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
