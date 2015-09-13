@@ -7,6 +7,8 @@ This Lab Repo contains my exercises and experimentations with the following comp
 - [HTML](html/)
 - [JavaScript](javascript/)
 - [PHPOO](php-oop/)
+- [PL-SQL](pl-sql/)
+- [Python](python/)
 
 
 ## License
