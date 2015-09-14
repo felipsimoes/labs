@@ -1,0 +1,76 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#login_form {
+    margin-left: 50px;
+    top: 30px; 
+    border: 1px solid black;
+    border-radius: .3em;
+    padding: 10px;
+}
+
+#login_form input, #cadastro_form input, #alteracao_form input {
+    margin: 5px;
+    height: 25px;
+    background-color: gainsboro;
+}
+
+p {
+    font-size: 20px;
+}
+
+ul {
+    list-style: circle;
+}
+
+#cadastro_form {
+    margin-left: 50px;
+    top: 50px;
+    width: 400px;
+    height: auto;  
+    border: 1px solid black;
+    border-radius: .3em;
+    padding: 10px;
+}
+
+#menu {
+ margin-bottom:5px; 
+ height: auto;
+ border:1px solid black;
+ margin-left: 10px;
+ width: 300px;
+}
+
+#menu ul {
+    margin-left: 35px;
+    list-style: circle;
+}
+
+#erro {
+    top: 50%;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+
+#alteracao_form {
+    margin-left: 50px;
+    top: 50px;
+    width: 400px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: .3em;
+    padding: 10px;
+}
+
+#novacategoria {
+    margin-left: 50px;
+    margin-top: 15px;
+    border: 2px dotted black;
+    width: 150px;
+    padding: 3px;
+    text-align: center;
+}

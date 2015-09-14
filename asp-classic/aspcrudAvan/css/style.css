@@ -1,0 +1,147 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 10px;
+}
+#login_form {
+    margin-left: 50px;
+    top: 30px; 
+    border: 1px solid black;
+    border-radius: .3em;
+    padding: 10px;
+}
+
+#login_form input, #cadastro_form input, #alteracao_form input {
+    margin: 5px;
+    height: 25px;
+    background-color: gainsboro;
+}
+
+p {
+    font-size: 20px;
+}
+
+ul {
+    list-style: circle;
+}
+
+#cadastro_form {
+    margin-left: 50px;
+    top: 50px;
+    width: 400px;
+    height: auto;  
+    border: 1px solid black;
+    border-radius: .3em;
+    padding: 10px;
+}
+
+#menu {
+ margin-bottom:5px; 
+ height: auto;
+ border:1px solid black;
+ margin-left: 10px;
+ width: 300px;
+}
+
+#menu ul {
+    margin-left: 35px;
+    list-style: circle;
+}
+
+#erro {
+    top: 50%;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+#alteracao_form {
+    margin-left: 50px;
+    top: 50px;
+    width: 400px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: .3em;
+    padding: 10px;
+}
+
+#novacategoria {
+    margin-left: 50px;
+    margin-top: 15px;
+    border: 2px dotted black;
+    width: 150px;
+    padding: 3px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#image_preview {
+    display: none;
+}
+#crop_area{
+    width: auto;
+    height: auto;
+    text-align: center;
+    float: right;
+    margin-top: 30px; 
+}
+#crop_form {
+    display: none;
+}
+
+.btn {
+    border: 1px solid black;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    margin-top: 10px;
+}
+#previewthumb {
+    width: 150px;
+    display: none;
+    overflow: hidden;
+}
+
+#preview-pane .preview-container {
+  width: 250px;
+  height: 170px;
+  overflow: hidden;
+}
+#preview-pane{
+    left: 600px;
+    top:450px;
+}
+.jcrop-holder #preview-pane {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  }
+
+#container-crop {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 550px;
+}
+
+#captcha {
+    margin-top: 20px;
+}
+
+#mainPesquisa {
+    border: 1px solid black;
+    height: 30px;
+    margin-left: 15px;
+    background-color: #dddddd;
+}
+
+#pesquisaForm {
+    margin-top: 20px;
+}
+#exportbuttons {
+    margin-top: 50px;
+    margin-left: 150px;
+}

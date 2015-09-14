@@ -1,0 +1,3 @@
+<%
+	strConexao = "DRIVER={MySQL ODBC 5.1 Driver};SERVER=186.202.152.175;PORT=3306;DATABASE=kbrtecdev;USER=kbrtecdev;PASSWORD='Vd62393E65pFG';OPTION=3;"
+%>
