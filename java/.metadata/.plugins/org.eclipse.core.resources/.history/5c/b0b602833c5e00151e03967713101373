@@ -1,0 +1,19 @@
+package livraria;
+
+public class RegrasDeDesconto {
+
+	public static void main(String[] args) {
+		
+		Autor autor = new Autor();
+		autor.setEmail("Mauricio Aniche");
+		
+		LivroFisico fisico = new LivroFisico(autor);
+		fisico.setNome("Test-Driven Development");
+	
+		Ebook ebook = new Ebook(autor);
+		ebook.setNome("Test-Driven Development");
+	
+		
+	}
+
+}
