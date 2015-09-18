@@ -17,6 +17,7 @@ public class CadastroDeLivros {
 		livro.autor = autor;
 		
 		livro.mostrarDetalhes();
+		autor.mostrarDetalhes();
 		
 		Autor outroAutor = new Autor();
 		outroAutor.nome  = "Paulo Silvera";
@@ -30,7 +31,9 @@ public class CadastroDeLivros {
 		outroLivro.isbn = "978-85-66250-22-0";
 		outroLivro.autor = outroAutor;
 		
-		outroLivro.mostrarDetalhes();	
+		outroLivro.mostrarDetalhes();
+		outroAutor.mostrarDetalhes();
+		
 		
 	}
 
