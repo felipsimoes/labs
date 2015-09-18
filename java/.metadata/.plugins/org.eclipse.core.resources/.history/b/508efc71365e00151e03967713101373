@@ -1,24 +1,24 @@
 package livraria;
 
-public class Livro {
-	private String nome;
-	private String descricao;
-	private double valor;
-	private String isbn;
-	private Autor autor;
-	private boolean impresso;
+public class Ebook extends Livro {
 	
-	//A assinatura que recebe Autor
-	//utiliza as definições de inicialização
-	//do construtor sem parâmetros
-	public Livro(Autor autor){
+	private String waterMark;
+	
+	public String getWaterMark() {
+		return waterMark;
+	}
+
+	public void setWaterMark(String waterMark) {
+		this.waterMark = waterMark;
+	}
+
+	public Ebook(Autor autor){
 		this();
 		this.autor = autor;
 	}
 	
-	public Livro(){
+	public Ebook(){
 		this.isbn = "000-00-00000-00-0";
-		this.impresso = true;
 	}
 	
 	public void mostrarDetalhes(){
@@ -34,17 +34,7 @@ public class Livro {
 		
 		System.out.println("--");
 	}
-	
-	public boolean aplicaDescontoDe(double porcentagem){
-		if (porcentagem > 0.3) {
-			//System.out.println("Desconto não pode ser maior do que 30%");
-			return false;
-		}
-		double desconto = this.getValor() * porcentagem;
-		this.setValor(this.getValor() * desconto);
-		return true;
-	}
-	
+		
 	public boolean temAutor(){
 		return this.autor != null;
 	}
@@ -91,5 +81,6 @@ public class Livro {
 	
 	
 }	
+
 
 

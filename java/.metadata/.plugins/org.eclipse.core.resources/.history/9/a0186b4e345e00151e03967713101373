@@ -6,20 +6,7 @@ public class Livro {
 	private double valor;
 	private String isbn;
 	private Autor autor;
-	private boolean impresso;
 	
-	//A assinatura que recebe Autor
-	//utiliza as definições de inicialização
-	//do construtor sem parâmetros
-	public Livro(Autor autor){
-		this();
-		this.autor = autor;
-	}
-	
-	public Livro(){
-		this.isbn = "000-00-00000-00-0";
-		this.impresso = true;
-	}
 	
 	public void mostrarDetalhes(){
 		System.out.println("Mostrando detalhes do livro");
@@ -35,13 +22,12 @@ public class Livro {
 		System.out.println("--");
 	}
 	
-	public boolean aplicaDescontoDe(double porcentagem){
+	public boolean aplicaDesconto(double porcentagem){
 		if (porcentagem > 0.3) {
-			//System.out.println("Desconto não pode ser maior do que 30%");
+			System.out.println("Desconto não pode ser maior do que 30%");
 			return false;
 		}
-		double desconto = this.getValor() * porcentagem;
-		this.setValor(this.getValor() * desconto);
+		this.valor -= this.valor * porcentagem;
 		return true;
 	}
 	
