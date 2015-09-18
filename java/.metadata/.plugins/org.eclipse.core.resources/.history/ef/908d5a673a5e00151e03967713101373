@@ -41,10 +41,10 @@ public class Livro {
 			return false;
 		}
 		double desconto = this.getValor() * porcentagem;
-		this.setValor(this.getValor() - desconto);
+		this.setValor(this.getValor() * desconto);
 		return true;
 	}
-		
+	
 	public boolean temAutor(){
 		return this.autor != null;
 	}

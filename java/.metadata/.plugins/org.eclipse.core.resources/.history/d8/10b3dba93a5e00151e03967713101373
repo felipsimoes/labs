@@ -44,7 +44,7 @@ public class Livro {
 		this.setValor(this.getValor() - desconto);
 		return true;
 	}
-		
+	
 	public boolean temAutor(){
 		return this.autor != null;
 	}

@@ -44,7 +44,11 @@ public class Livro {
 		this.setValor(this.getValor() - desconto);
 		return true;
 	}
-		
+	
+	public double getTaxaImpressao(){
+		return this.getValor() * 0.05;
+	}
+	
 	public boolean temAutor(){
 		return this.autor != null;
 	}
