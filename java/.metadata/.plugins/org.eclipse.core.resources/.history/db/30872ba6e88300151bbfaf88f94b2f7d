@@ -19,8 +19,12 @@ public class Autor {
 	
 	@Override
 	public boolean equals(Object obj){
-		if(!(obj instanceof Autor)) return false;
-		Autor outro = (Autor) obj;
+		Autor outro;
+		try {
+			outro = (Autor) obj;
+		} catch (Exception e) {
+			return false;
+		}
 		return this.nome.equals(outro.nome);
 	}
 	
