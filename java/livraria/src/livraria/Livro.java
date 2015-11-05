@@ -1,6 +1,6 @@
 package livraria;
 
-public class Livro {
+public abstract class Livro {
 	private String nome;
 	private String descricao;
 	private double valor;
@@ -35,16 +35,7 @@ public class Livro {
 		System.out.println("--");
 	}
 	
-	public boolean aplicaDescontoDe(double porcentagem){
-		if (porcentagem > 0.3) {
-			//System.out.println("Desconto não pode ser maior do que 30%");
-			return false;
-		}
-		System.out.println("aplicando desconto no Livro");
-		double desconto = this.getValor() * porcentagem;
-		this.setValor(this.getValor() - desconto);
-		return true;
-	}
+	public abstract boolean aplicaDescontoDe(double porcentagem);
 		
 	public boolean temAutor(){
 		return this.autor != null;

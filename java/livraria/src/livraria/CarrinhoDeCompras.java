@@ -8,7 +8,7 @@ public class CarrinhoDeCompras {
 	//polimorfismo de classe
 	public void adiciona(Livro livro){
 		System.out.println("Adicionando " + livro);
-		livro.aplicaDescontoDe(0.13);
+		livro.aplicaDescontoDe(0.16);
 		total += livro.getValor();
 	}
 	
