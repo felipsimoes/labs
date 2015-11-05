@@ -17,7 +17,7 @@ public class LivroFisico extends Livro implements Promocional {
 		}
 		double desconto = this.getValor() * porcentagem;
 		this.setValor(this.getValor() - desconto);
-		System.out.println("Aplicando desconto no LivroFisico");
+		//System.out.println("Aplicando desconto no LivroFisico");
 		return true;
 	}
 }
