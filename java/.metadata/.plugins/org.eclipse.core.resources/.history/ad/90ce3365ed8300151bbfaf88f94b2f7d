@@ -1,14 +1,13 @@
 package br.com.casadocodigo.livraria.teste;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import br.com.casadocodigo.livraria.produtos.Produto;
 
 public class CarrinhoDeCompras {
 
 	private double total;
-	private List<Produto> produtos;
+	private ArrayList<Produto> produtos;
 	
 	public CarrinhoDeCompras(){
 		this.produtos = new ArrayList<>();
@@ -34,7 +33,7 @@ public class CarrinhoDeCompras {
 		System.out.println("Fui executado!");
 	}
 	
-	public List<Produto> getProdutos(){
+	public ArrayList<Produto> getProdutos(){
 		return produtos;
 	}
 	

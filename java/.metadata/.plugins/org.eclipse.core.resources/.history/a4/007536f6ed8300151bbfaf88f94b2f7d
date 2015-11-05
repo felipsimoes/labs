@@ -34,10 +34,11 @@ public class RegistroDeVendas {
 		System.out.println("Total " + carrinho.getTotal());
 		List<Produto> produtos = carrinho.getProdutos();
 		
-		for(Produto produto: produtos){
+		for(List produto: produtos){
 			System.out.println(produto);
 		}
 		
+		System.out.println(ebook);
 	}
 
 }

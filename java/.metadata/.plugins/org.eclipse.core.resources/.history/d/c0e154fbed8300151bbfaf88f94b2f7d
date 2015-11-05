@@ -38,6 +38,7 @@ public class RegistroDeVendas {
 			System.out.println(produto);
 		}
 		
+		System.out.println(ebook);
 	}
 
 }
