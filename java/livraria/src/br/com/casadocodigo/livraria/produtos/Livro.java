@@ -103,7 +103,16 @@ public abstract class Livro implements Produto {
 	public void setAutor(Autor autor) {
 		this.autor = autor;
 	}
-	
+	@Override
+	public int compareTo(Produto outro){
+		if(this.getValor() < outro.getValor()){
+			return -1;
+		}
+		if(this.getValor() > outro.getValor()){
+			return 1;
+		}
+		return 0;
+	}
 }	
 
 

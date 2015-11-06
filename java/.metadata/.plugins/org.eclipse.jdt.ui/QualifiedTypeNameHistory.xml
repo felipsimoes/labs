@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="br.com.casadocodigo.livraria.produtos.Produto"/>
 <fullyQualifiedTypeName name="br.com.casadocodigo.livraria.exception.AutorNuloException"/>
 <fullyQualifiedTypeName name="br.com.casadocodigo.livraria.produtos.Livro"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="br.com.casadocodigo.livraria.Autor"/>
+<fullyQualifiedTypeName name="br.com.casadocodigo.livraria.produtos.LivroFisico"/>
+<fullyQualifiedTypeName name="br.com.casadocodigo.livraria.produtos.Ebook"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="br.com.casadocodigo.livraria.produtos.Produto"/>
 </qualifiedTypeNameHistroy>

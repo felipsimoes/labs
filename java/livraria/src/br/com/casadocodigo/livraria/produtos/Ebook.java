@@ -29,19 +29,6 @@ public class Ebook extends Livro implements Promocional {
 		System.out.println("Aplicando desconto no Ebook");
 		return true;
 	}
-
-
-	@Override
-	public int compareTo(Produto outro) {
-		if (this.getValor() < outro.getValor()){
-			return -1;
-		}
-		if (this.getValor() > outro.getValor()){
-			return 1;
-		}
-		return 0;
-	}
-	
 	
 }	
 
