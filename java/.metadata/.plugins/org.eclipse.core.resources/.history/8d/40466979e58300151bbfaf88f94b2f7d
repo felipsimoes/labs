@@ -1,5 +1,0 @@
-package br.com.casadocodigo.livraria.exception;
-
-public class AutorNuloException {
-
-}

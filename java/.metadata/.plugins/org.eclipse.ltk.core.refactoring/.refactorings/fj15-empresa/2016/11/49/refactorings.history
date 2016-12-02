@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;funcionario2&apos; from expression &apos;new Funcionario(&quot;F&quot;,1,dataNascimento)&apos;&#x0D;&#x0A;- Original project: &apos;fj15-empresa&apos;&#x0D;&#x0A;- Variable name: &apos;funcionario2&apos;&#x0D;&#x0A;- Destination method: &apos;br.com.caelum.empresa.Principal.main()&apos;&#x0D;&#x0A;- Variable expression: &apos;new Funcionario(&quot;F&quot;,1,dataNascimento)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;funcionario2&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/main\/java&lt;br.com.caelum.empresa{Principal.java" name="funcionario2" replace="true" selection="428 0" stamp="1480517330836" version="1.0"/>
+</session>

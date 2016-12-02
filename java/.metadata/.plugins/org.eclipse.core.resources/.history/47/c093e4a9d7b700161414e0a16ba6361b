@@ -1,0 +1,29 @@
+package view;
+
+import java.awt.GraphicsConfiguration;
+import java.awt.HeadlessException;
+
+import javax.swing.JFrame;
+
+public class FormListaItens extends JFrame {
+
+	public FormListaItens() throws HeadlessException {
+		// TODO Auto-generated constructor stub
+	}
+
+	public FormListaItens(GraphicsConfiguration gc) {
+		super(gc);
+		// TODO Auto-generated constructor stub
+	}
+
+	public FormListaItens(String title) throws HeadlessException {
+		super(title);
+		// TODO Auto-generated constructor stub
+	}
+
+	public FormListaItens(String title, GraphicsConfiguration gc) {
+		super(title, gc);
+		// TODO Auto-generated constructor stub
+	}
+
+}

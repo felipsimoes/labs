@@ -1,0 +1,19 @@
+package view;
+
+import java.awt.GraphicsConfiguration;
+import java.awt.HeadlessException;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
+public class FormListaItens extends JFrame {
+
+	private ArrayList<String> refList;
+	
+	public FormListaItens(ArrayList<String> arrayList) {
+		super();
+		refList = arrayList;
+	}
+	
+	
+}

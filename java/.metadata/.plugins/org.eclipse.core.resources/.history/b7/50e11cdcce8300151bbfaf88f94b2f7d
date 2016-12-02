@@ -1,5 +1,0 @@
-package livraria;
-
-public interface Promocional {
-	public boolean aplicaDescontoDe(double porcentagem);
-}

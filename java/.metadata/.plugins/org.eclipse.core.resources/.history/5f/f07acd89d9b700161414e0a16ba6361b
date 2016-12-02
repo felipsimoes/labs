@@ -1,0 +1,39 @@
+package view;
+
+import java.awt.Container;
+import java.awt.GraphicsConfiguration;
+import java.awt.HeadlessException;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class FormListaItens extends JFrame {
+	private JFrame form;
+	private JLabel lblNome;
+	private ArrayList<String> refLista;
+	
+	public FormListaItens(ArrayList<String> arrayList) {
+		inicializarComponentes();
+		refLista = arrayList;
+	}
+
+	private void inicializarComponentes() {
+		declaraForm();
+
+		Container painel = form.getContentPane();
+//		refLista.forEach(e -> System.out.println(e));
+
+		form.setVisible(true);
+	}
+
+	private void declaraForm() {
+		form = new JFrame();
+		form.setTitle("Trabalho P1 - CRUD em ArrayList");
+		form.setBounds(350, 150, 400, 300);
+		form.setLayout(null);
+		form.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);		
+	}
+	
+	
+}

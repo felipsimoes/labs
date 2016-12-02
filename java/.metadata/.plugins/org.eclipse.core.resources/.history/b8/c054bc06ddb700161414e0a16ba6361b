@@ -1,0 +1,61 @@
+package view;
+
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.GraphicsConfiguration;
+import java.awt.HeadlessException;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class FormListaItens extends JFrame {
+	private JFrame form;
+	private JLabel lblNome;
+	private ArrayList<String> refLista;
+	private JTable jTable;
+	
+	public FormListaItens(ArrayList<String> arrayList) {
+		refLista = arrayList;
+		inicializarComponentes();
+	}
+
+	private void inicializarComponentes() {
+		declaraForm();
+
+		Container painel = form.getContentPane();
+		
+		String[] colunas = {"id","nome"};
+		
+		jTable = new JTable();
+		jTable.setPreferredScrollableViewportSize(new Dimension(500, 50));
+		jTable.setFillsViewportHeight(true);
+		
+		DefaultTableModel model = (DefaultTableModel) jTable.getModel();
+		Object dados[] = new Object[2];
+		int tam = refLista.size();
+		for (int i = 0; i < tam; i++) {
+			dados[0] = i;
+			dados[1] = refLista.get(i);
+			model.addRow(dados);
+		}
+		
+		JScrollPane jScrollPane = new JScrollPane(jTable);
+		
+		form.add(jScrollPane);
+		form.setVisible(true);
+	}
+
+	private void declaraForm() {
+		form = new JFrame();
+		form.setTitle("Trabalho P1 - CRUD em ArrayList");
+		form.setBounds(350, 150, 400, 300);
+		form.setLayout(null);
+		form.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);		
+	}
+	
+	
+}

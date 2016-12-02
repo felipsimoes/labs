@@ -1,0 +1,87 @@
+package view;
+
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+public class Formulario {
+	private JFrame form;
+	private JLabel lblNome;
+	private JTextField txtNome;
+	private JButton btnSaudar;
+
+	public Formulario() {
+		inicializarComponentes();
+	}
+
+	private void inicializarComponentes(){
+		form = new JFrame();
+		form.setTitle("Trabalho P1 - CRUD em ArrayList");
+		form.setBounds(350, 150, 400, 300);
+		form.setLayout(null);
+		form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		Container painel = form.getContentPane();
+
+		Font fontLabel = new Font("Arial", Font.BOLD, 16);
+		lblNome = new JLabel("Nome:");
+		lblNome.setBounds(25, 30, 60, 25);
+		lblNome.setForeground(Color.BLUE);
+		lblNome.setFont(fontLabel);
+
+		painel.add(lblNome);
+
+		txtNome = new JTextField();
+		txtNome.setBounds(90, 30, 230, 25);
+		txtNome.setFont(new Font("Verdana", Font.PLAIN, 12));
+		txtNome.addKeyListener(new KeyListener() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				String numeros = "0123456789";
+				if (numeros.contains(e.getKeyChar() + "")){
+					e.consume();
+				}
+			}
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if (e.getKeyCode() == KeyEvent.VK_ENTER){
+					enviarSaudacao();
+				}
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+				btnSaudar.setEnabled(txtNome.getText().length() >= 2);
+			}
+		});
+		painel.add(txtNome);
+
+		btnSaudar = new JButton("1 - Incluir Item");
+		btnSaudar.setBounds(100, 150, 200, 25);
+		btnSaudar.setEnabled(false);
+		btnSaudar.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				enviarSaudacao();
+			}
+		});
+		painel.add(btnSaudar);
+
+		form.setVisible(true);
+	}
+
+	private void enviarSaudacao(){
+		JOptionPane.showMessageDialog(null,  "Olá!" );    
+	}
+}

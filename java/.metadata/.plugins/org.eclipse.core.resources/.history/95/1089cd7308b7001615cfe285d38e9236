@@ -1,0 +1,12 @@
+
+public class BalancoTrimestral {
+	public static void main(String[] args) {
+		int gastosJaneiro = 15000;
+		int gastosFeveiro = 23000; 
+		int gastosMarco = 17000;
+		int gastosTrimestre = gastosJaneiro + gastosFeveiro + gastosMarco;
+		
+		System.out.println(gastosTrimestre);
+		
+	}
+}
