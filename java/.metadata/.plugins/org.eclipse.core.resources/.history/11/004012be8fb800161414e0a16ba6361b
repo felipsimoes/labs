@@ -1,0 +1,74 @@
+package view;
+
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GraphicsConfiguration;
+import java.awt.HeadlessException;
+import java.util.ArrayList;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.ScrollPaneLayout;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+
+import business.FormAbstrato;
+
+@SuppressWarnings("serial")
+public class FormListaItens extends FormAbstrato {
+	private JFrame form;
+	private JPanel panel = new JPanel();
+	private JLabel lblNome;
+	private ArrayList<String> refLista;
+	private JTable jTable;
+	private JScrollPane jScrollPane;
+	
+	public FormListaItens(ArrayList<String> arrayList) {
+		refLista = arrayList;
+		inicializarComponentes();
+	}
+
+	private void inicializarComponentes() {
+		declaraForm();
+
+		Container painel = form.getContentPane();
+	
+		Object[] colunas = {"id","nome"};
+		DefaultTableModel tableModel = new DefaultTableModel(colunas, 0);
+		jTable = new JTable(tableModel);
+		
+		int tam = refLista.size();
+		for (int i = 0; i < tam; i++) {
+			Object dados[] = new Object[2];
+			dados[0] = i;
+			dados[1] = refLista.get(i);
+			tableModel.addRow(dados);
+		}
+
+		jTable.setPreferredScrollableViewportSize(jTable.getPreferredSize());
+		jTable.setFillsViewportHeight(true);
+	    jScrollPane = new JScrollPane(jTable);
+	    
+	    panel.setLayout(new FlowLayout());
+	    jScrollPane.setLayout(new ScrollPaneLayout());
+	    painel.add(jScrollPane);
+	   
+		add(jScrollPane);
+		setVisible(true);
+	 
+		setBounds(350, 150, 400, 300);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);	
+	}
+
+	private void declaraForm() {
+		form = new JFrame();
+		form.setTitle("Trabalho P1 - CRUD em ArrayList");
+			
+	}
+	
+	
+}

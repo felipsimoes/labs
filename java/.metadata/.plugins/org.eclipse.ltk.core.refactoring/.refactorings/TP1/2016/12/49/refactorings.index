@@ -7,3 +7,6 @@
 1480600585777	Extract method 'extracted'
 1480600720039	Extract method 'extracted'
 1480601436938	Extract method 'extracted'
+1480683156019	Extract local variable 'string'
+1480685536809	Extract method 'defineTxtFieldEndereco'
+1480686975790	Extract method 'extracted'

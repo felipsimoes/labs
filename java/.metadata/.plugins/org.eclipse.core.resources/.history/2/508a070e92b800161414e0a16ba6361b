@@ -1,0 +1,9 @@
+package business;
+
+public class Imovel {
+
+	public Imovel() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

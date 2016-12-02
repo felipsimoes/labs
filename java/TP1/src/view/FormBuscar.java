@@ -9,7 +9,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
-import javax.rmi.CORBA.Util;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,18 +16,20 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import business.FormAbstrato;
+import business.Imovel;
 
+@SuppressWarnings("serial")
 public class FormBuscar extends FormAbstrato{
 
 	private JFrame form;
 	private JLabel lblNome;
 	private JTextField txtNome;
 	private JButton btnAlterar;
-	private ArrayList<String> refLista;
+	private ArrayList<Imovel> refLista;
 	private JButton btnExcluir;
 	private Container painel;
 	
-	public FormBuscar(ArrayList<String> lista) {
+	public FormBuscar(ArrayList<Imovel> lista) {
 		refLista = lista;
 		inicializarComponentes();
 	}
@@ -53,6 +54,24 @@ public class FormBuscar extends FormAbstrato{
 		btnAlterar = new JButton("Alterar Item");
 		btnAlterar.setBounds(100, 150, 200, 25);
 		btnAlterar.setEnabled(false);
+		btnAlterar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String t = txtNome.getText();
+					int id = Integer.parseInt(t);
+					if( refLista.get(id) != null ) {
+						new Formulario(refLista, id);
+					}else{
+						mensagemIdNaoEncontrado();
+					}
+				} catch (Exception exception) {
+					System.out.println(exception.getMessage());
+					mensagemProblemaId();
+				}
+			}
+		});
 		
 		btnExcluir = new JButton("Excluir Item");
 		btnExcluir.setBounds(100, 180, 200, 25);
@@ -73,7 +92,7 @@ public class FormBuscar extends FormAbstrato{
 					
 				} catch (Exception exc) {
 					System.out.println(exc.getMessage());
-					 mensagemIdNaoEncontrado();
+					mensagemProblemaId();
 				}
 			}
 		});
@@ -87,6 +106,10 @@ public class FormBuscar extends FormAbstrato{
 		JOptionPane.showMessageDialog(null,  "Item com esse id não pode ser encontrado" );
 	}
 
+	private void mensagemProblemaId() {
+		JOptionPane.showMessageDialog(null,  "Houve um problema na busca desse id" );
+	}
+	
 	private void declarandoTxtFields() {
 		txtNome = new JTextField();
 		txtNome.setBounds(130, 30, 50, 25);

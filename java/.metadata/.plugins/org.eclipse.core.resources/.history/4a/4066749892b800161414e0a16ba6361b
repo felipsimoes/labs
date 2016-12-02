@@ -1,0 +1,14 @@
+package business;
+
+public class Imovel {
+	private String endereco;
+	private int metrosQuadrados;
+	private int numQuartos;
+	private int valorLocacao;
+	
+	
+	public Imovel() {
+
+	}
+
+}
