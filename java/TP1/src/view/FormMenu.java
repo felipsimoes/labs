@@ -5,14 +5,11 @@ import java.awt.Container;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 
 public class FormMenu {
 	private static final Font FONT_ARIAL_BOLD = new Font("Arial", Font.BOLD, 16);
@@ -20,28 +17,27 @@ public class FormMenu {
 	private JLabel lblTitulo;
 	private JButton btnIncluir;
 	private JButton btnListar;
+	private JButton btnBuscar;
+	private Container painel;
+	private ArrayList<String> lista = new ArrayList<>();
+	private Formulario formInc;
 
-	public FormMenu(ArrayList<String> arrayList) {
-		inicializarComponentes(arrayList);
+	public FormMenu() {
+		lista.add("TESTE");
+		inicializarComponentes();
 	}
 
-	private void inicializarComponentes(ArrayList<String> lista){
+	private void inicializarComponentes(){
 		declaraForm();
 
-		Container painel = form.getContentPane();
+		painel = form.getContentPane();
 
 		declaraLabels();
 		painel.add(lblTitulo);
 
 		definirBotoes(lista);
-		painel.add(btnIncluir);
-		painel.add(btnListar);
 
 		form.setVisible(true);
-	}
-
-	protected void incluirItem() {
-		
 	}
 
 	private void declaraLabels() {
@@ -54,7 +50,7 @@ public class FormMenu {
 	private void declaraForm() {
 		form = new JFrame();
 		form.setTitle("Trabalho P1 - CRUD em ArrayList");
-		form.setBounds(350, 150, 400, 300);
+		form.setBounds(350, 150, 400, 400);
 		form.setLayout(null);
 		form.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
@@ -62,6 +58,24 @@ public class FormMenu {
 	private void definirBotoes(ArrayList<String> lista) {
 		defBotaoIncluir(lista);
 		defBotaoListar(lista);
+		defBotaoBuscar(lista);
+		
+		painel.add(btnIncluir);
+		painel.add(btnListar);
+		painel.add(btnBuscar);
+	}
+
+	private void defBotaoBuscar(ArrayList<String> lista) {
+		btnBuscar = new JButton("3 - Buscar Item");
+		btnBuscar.setBounds(100, 210, 200, 25);
+		btnBuscar.setEnabled(true);
+		btnBuscar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new FormBuscar(lista);
+			}
+		});
 	}
 
 	private void defBotaoListar(ArrayList<String> lista) {
@@ -84,8 +98,14 @@ public class FormMenu {
 		btnIncluir.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				Formulario.getInstance(lista);
+				formIncluir();
 			}
 		});
+	}
+
+	protected void formIncluir() {
+//		if(formInc == null){
+			formInc = new Formulario(lista);
+//		}
 	}
 }

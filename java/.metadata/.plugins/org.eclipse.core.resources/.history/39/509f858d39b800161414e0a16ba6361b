@@ -1,0 +1,11 @@
+package business;
+
+import java.awt.Font;
+
+public abstract class FormAbstrato {
+	private static final Font FONT_ARIAL_BOLD = new Font("Arial", Font.BOLD, 16);
+	
+	abstract void inicializarComponentes();
+	
+	abstract void declaraLabels();
+}

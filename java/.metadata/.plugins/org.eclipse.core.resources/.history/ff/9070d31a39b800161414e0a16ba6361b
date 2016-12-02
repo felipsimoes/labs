@@ -1,0 +1,29 @@
+package view;
+
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class FormBuscar extends JFrame{
+
+	private JFrame form;
+	private JLabel lblNome;
+	private JTextField txtNome;
+	private JButton btnIncluir;
+	private ArrayList<String> refLista;
+	
+	public FormBuscar() {
+	
+	}
+
+	private void declaraForm() {
+		form = new JFrame();
+		form.setTitle("Trabalho P1 - CRUD em ArrayList");
+		form.setBounds(350, 150, 400, 300);
+		form.setLayout(null);
+		form.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	}
+}

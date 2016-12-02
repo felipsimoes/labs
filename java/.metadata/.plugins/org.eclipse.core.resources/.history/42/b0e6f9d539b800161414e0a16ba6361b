@@ -1,0 +1,14 @@
+package business;
+
+import java.awt.Font;
+
+import javax.swing.JFrame;
+
+@SuppressWarnings("serial")
+public abstract class FormAbstrato extends JFrame{
+	private static final Font FONT_ARIAL_BOLD = new Font("Arial", Font.BOLD, 16);
+	
+	abstract void inicializarComponentes();
+	
+	abstract void declaraLabels();
+}

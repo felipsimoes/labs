@@ -1,0 +1,9 @@
+package view;
+
+public class FormBuscar {
+
+	public FormBuscar() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

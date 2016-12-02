@@ -15,29 +15,22 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-public class Formulario extends JFrame {
+import business.FormAbstrato;
+
+public class Formulario extends FormAbstrato {
 	
-	private static Formulario instance;
-	private static final Font FONT_ARIAL_BOLD = new Font("Arial", Font.BOLD, 16);
 	private JFrame form;
 	private JLabel lblNome;
 	private JTextField txtNome;
 	private JButton btnIncluir;
 	private ArrayList<String> refLista;
 
-	private Formulario(ArrayList<String> lista) {
+	public Formulario(ArrayList<String> lista) {
 		refLista = lista;
 		inicializarComponentes();
 	}
 	
-	public static synchronized Formulario getInstance(ArrayList<String> lista){
-		if(instance == null)
-			instance = new Formulario(lista);
-		instance.setVisible(true);
-		return instance;
-	}
-	
-	private void inicializarComponentes(){
+	protected void inicializarComponentes(){
 		declaraForm();
 
 		Container painel = form.getContentPane();
@@ -81,7 +74,7 @@ public class Formulario extends JFrame {
 		});
 	}
 
-	private void declaraLabels() {
+	protected void declaraLabels() {
 		lblNome = new JLabel("Nome:");
 		lblNome.setBounds(25, 30, 60, 25);
 		lblNome.setForeground(Color.BLUE);

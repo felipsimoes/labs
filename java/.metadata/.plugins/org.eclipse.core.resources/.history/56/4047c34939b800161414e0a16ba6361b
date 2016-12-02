@@ -1,0 +1,9 @@
+package business;
+
+public abstract class FormAbstrato {
+
+	public FormAbstrato() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

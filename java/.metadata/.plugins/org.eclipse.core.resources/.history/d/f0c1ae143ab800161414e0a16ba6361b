@@ -1,0 +1,59 @@
+package view;
+
+import java.awt.Color;
+import java.awt.Container;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+import business.FormAbstrato;
+
+public class FormBuscar extends FormAbstrato{
+
+	private JFrame form;
+	private JLabel lblNome;
+	private JTextField txtNome;
+	private JButton btnIncluir;
+	private ArrayList<String> refLista;
+	
+	public FormBuscar(ArrayList<String> lista) {
+		refLista = lista;
+		inicializarComponentes();
+	
+	}
+
+	private void inicializarComponentes() {
+		declaraForm();
+
+		Container painel = form.getContentPane();
+
+		declaraLabels();
+		painel.add(lblNome);
+
+//		declarandoTxtFields();
+//		painel.add(txtNome);
+
+//		definirBotoes();
+//		painel.add(btnIncluir);
+
+		form.setVisible(true);
+	}
+
+	private void declaraLabels() {
+		lblNome = new JLabel("Código:");
+		lblNome.setBounds(25, 30, 60, 25);
+		lblNome.setForeground(Color.BLUE);
+		lblNome.setFont(FONT_ARIAL_BOLD);
+	}
+
+	private void declaraForm() {
+		form = new JFrame();
+		form.setTitle("Trabalho P1 - CRUD em ArrayList");
+		form.setBounds(350, 150, 400, 300);
+		form.setLayout(null);
+		form.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	}
+}
